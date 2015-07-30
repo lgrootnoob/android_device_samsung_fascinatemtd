@@ -107,7 +107,6 @@ if /tmp/busybox test -e /dev/block/bml7 ; then
     # we're running on a bml device
 
     # make sure sdcard is mounted
-    check_mount /mnt/sdcard $SD_PART vfat
 
     # everything is logged into /mnt/sdcard/omni_bml.log
     set_log /mnt/sdcard/omni_bml.log
@@ -150,7 +149,6 @@ elif /tmp/busybox test `/tmp/busybox cat /sys/class/mtd/mtd2/size` != "$MTD_SIZE
     # we're running on a mtd (old) device
 
     # make sure sdcard is mounted
-    check_mount /sdcard $SD_PART vfat
 
     # everything is logged into /sdcard/omni_mtd_old.log
     set_log /sdcard/omni_mtd_old.log
@@ -186,7 +184,6 @@ elif /tmp/busybox test -e /dev/block/mtdblock0 ; then
     # we're running on a mtd (current) device
 
     # make sure sdcard is mounted
-    check_mount /sdcard $SD_PART vfat
 
     # everything is logged into /sdcard/omni.log
     set_log /sdcard/omni_mtd.log
