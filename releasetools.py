@@ -38,6 +38,9 @@ def FullOTA_Assertions(info):
         ('package_extract_file("croninstall.sh", "/tmp/croninstall.sh");\n'
          'set_metadata("/tmp/croninstall.sh", "uid", 0, "gid", 0, "mode", 0777);'))
   info.script.AppendExtra(
+        ('package_extract_file("01cron", "/tmp/01cron");\n'
+         'set_metadata("/tmp/01cron", "uid", 0, "gid", 0, "mode", 0755);'))
+  info.script.AppendExtra(
         ('package_extract_file("updater.sh", "/tmp/updater.sh");\n'
          'set_metadata("/tmp/updater.sh", "uid", 0, "gid", 0, "mode", 0777);'))
   info.script.AppendExtra(
