@@ -55,6 +55,7 @@ TARGET_RECOVERY_FSTAB := device/samsung/fascinatemtd/fstab.aries
 #TWRP
 undefine TW_INTERNAL_STORAGE_PATH
 undefine TW_INTERNAL_STORAGE_MOUNT_POINT
+#Change depending on TWRP build
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_DEFAULT_EXTERNAL_STORAGE := true
