@@ -54,8 +54,16 @@ PRODUCT_COPY_FILES += \
 # hak
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/bml_over_mtd.sh:bml_over_mtd.sh \
-	device/samsung/fascinatemtd/croninstall.sh:croninstall.sh \
-	device/samsung/fascinatemtd/media:system
+	device/samsung/fascinatemtd/croninstall.sh:croninstall.sh
+#	device/samsung/fascinatemtd/media:system
+.PHONY: do_script
+
+do_script: 
+    bootanimhack.sh
+
+prerequisites: do_script
+
+target: prerequisites 
 # ppp
 PRODUCT_COPY_FILES += \
 	device/samsung/fascinatemtd/ip-up:system/etc/ppp/ip-up
