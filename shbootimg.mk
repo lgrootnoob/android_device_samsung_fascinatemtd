@@ -1,6 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 # Uncompress ramdisk.img to avoid double compression
+#ramdisk.img?
 uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk.cpio
 $(uncompressed_ramdisk): $(INSTALLED_RAMDISK_TARGET)
 	$(MINIGZIP) -d < $(INSTALLED_RAMDISK_TARGET) > $@
