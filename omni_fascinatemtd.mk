@@ -31,8 +31,8 @@ $(call inherit-product, vendor/omni/config/cdma.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-# Bootanimation
-TARGET_BOOTANIMATION_SIZE := 480x320
+# Bootanimation let's test this
+TARGET_BOOTANIMATION_SIZE := 480x800
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/fascinatemtd/fascinatemtd.mk)
