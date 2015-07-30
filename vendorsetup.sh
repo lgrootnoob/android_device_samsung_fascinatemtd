@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_fascinatemtd-userdebug
+add_lunch_combo omni_fascinatemtd-user
