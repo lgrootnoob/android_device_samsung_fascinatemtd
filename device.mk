@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/bml_over_mtd.sh:bml_over_mtd.sh \
 	device/samsung/fascinatemtd/croninstall.sh:croninstall.sh \
-	device/samsung/fascinatemtd/bootanim.zip:system/media/bootanimation.zip
+	device/samsung/fascinatemtd/media:system
 # ppp
 PRODUCT_COPY_FILES += \
 	device/samsung/fascinatemtd/ip-up:system/etc/ppp/ip-up
