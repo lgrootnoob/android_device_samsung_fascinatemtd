@@ -53,7 +53,8 @@ PRODUCT_COPY_FILES += \
 
 # hak
 PRODUCT_COPY_FILES += \
-	device/samsung/aries-common/bml_over_mtd.sh:bml_over_mtd.sh
+	device/samsung/aries-common/bml_over_mtd.sh:bml_over_mtd.sh \
+	device/samsung/fascinatemtd/croninstall.sh:croninstall.sh
 
 # ppp
 PRODUCT_COPY_FILES += \
