@@ -31,7 +31,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a8
 TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_SMP := false
-KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin"
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/"
 
 # Bionic stuff
 BOARD_USES_LEGACY_MMAP := true
