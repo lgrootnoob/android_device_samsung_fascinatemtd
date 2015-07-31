@@ -212,16 +212,10 @@ BOARD_SEPOLICY_UNION += \
 # Include aries specific stuff
 -include device/samsung/aries-common/Android.mk
 
-<<<<<<< HEAD
-#TWRP
-undefine TW_INTERNAL_STORAGE_PATH
-undefine TW_INTERNAL_STORAGE_MOUNT_POINT
-#Change depending on TWRP build
-=======
+#Change depending on TWRP build, update changed by xc hopefully works this time
 # TWRP Flags
 TW_THEME := portrait_mdpi
 TW_NO_REBOOT_BOOTLOADER := true
->>>>>>> a40a200643e532e70f911674e9c7851cc2aada35
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_DEFAULT_EXTERNAL_STORAGE := true
