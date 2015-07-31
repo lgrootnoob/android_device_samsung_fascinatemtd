@@ -57,8 +57,7 @@ TARGET_KERNEL_CONFIG := omni_fascinatemtd_defconfig
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/fascinatemtd
 
-# Fonts
-EXTENDED_FONT_FOOTPRINT := true
+# xc, your high. ;3
 
 # Audio
 TARGET_PROVIDES_LIBAUDIO := true
@@ -114,13 +113,11 @@ BOARD_USES_MULTIPLE_SDCARD_FS := true
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
-    WITH_DEXPREOPT := true
-    WITH_DEXPREOPT_BOOT_IMG_ONLY := true
-    DONT_DEXPREOPT_PREBUILTS := true
+    WITH_DEXPREOPT := true   
 endif
 
 # ART
-WITH_ART_SMALL_MODE := true
+#WITH_ART_SMALL_MODE := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true

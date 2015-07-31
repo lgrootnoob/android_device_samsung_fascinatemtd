@@ -177,6 +177,7 @@ PRODUCT_COPY_FILES += \
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
+    config.disable_telephony=true \
     debug.hwui.render_dirty_regions=false \
     ro.zygote.disable_gl_preload=true
 
@@ -201,7 +202,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.dex2oat-filter=balanced \
+    dalvik.vm.dex2oat-filter=speed \
     dalvik.vm.image-dex2oat-filter=speed
 
 # Camera
@@ -243,10 +244,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Set default USB interface and default to internal SD as /sdcard
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
-
-# ART
-PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := \
-    --compiler-filter=interpret-only
 
 # decoy recovery kernel
 PRODUCT_COPY_FILES += \
