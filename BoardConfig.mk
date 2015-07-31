@@ -31,7 +31,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a8
 TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_SMP := false
-KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(strip $(HOST_OS))-x86/arm/arm-eabi-4.7/bin/"
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin"
 
 # Bionic stuff
 BOARD_USES_LEGACY_MMAP := true
@@ -50,7 +50,6 @@ TARGET_PROVIDES_INIT := true
 TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOOTLOADER_BOARD_NAME := aries
 
-# Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/aries
 TARGET_KERNEL_CONFIG := omni_fascinatemtd_defconfig
 
