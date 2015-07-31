@@ -25,9 +25,6 @@ TARGET_LOW_RAM_DEVICE := true
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Don't Inhert CDMA parts
-#$(call inherit-product, vendor/omni/config/cdma.mk)
-
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
