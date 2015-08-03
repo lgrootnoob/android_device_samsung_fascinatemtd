@@ -71,9 +71,6 @@ PRODUCT_COPY_FILES += \
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
-	device/samsung/fascinatemtd/croninstall.sh:croninstall.sh
-#	device/samsung/fascinatemtd/media:system
-FILES = $(shell device/samsung/fascinatemtd/bootanimhack.sh)
     device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc
 
 # Filesystem management tools
@@ -202,8 +199,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.dex2oat-filter=speed \
-    dalvik.vm.image-dex2oat-filter=speed
+    dalvik.vm.dex2oat-filter=everything \
+    dalvik.vm.image-dex2oat-filter=everything
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -251,7 +248,7 @@ PRODUCT_COPY_FILES += \
 
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 
-$(call add-product-dex-preopt-module-config,services,--compiler-filter=speed)
+$(call add-product-dex-preopt-module-config,services,--compiler-filter=everything)
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
