@@ -24,15 +24,23 @@ BOARD_USES_GENERIC_AUDIO := false
 AUDIO_FEATURE_ENABLED_INCALL_MUSIC := false
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
 
+TARGET_NO_HW_VSYNC := true
 TARGET_ARCH := arm
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_ABI := armeabi-v7a-hard
+TARGET_CPU_ABI2 := armeabi-v7a-hard
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a8
 TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_SMP := false
 KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin"
-
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=hardfp -gtoggle -s -DNDEBUG -march=armv7-a -mthumb -O2 -funroll-loops -mimplicit-it=always -mno-warn-deprecated -mauto-it --disable-docs -mtls-dialect=gnu2 --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256 --param simultaneous-prefetches=6 --param prefetch-latency=400 -mvectorize-with-neon-quad
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=hardfp -gtoggle -s -DNDEBUG -O2 -funroll-loops -mthumb -march=armv7-a -mimplicit-it=always -mno-warn-deprecated -mauto-it --disable-docs -mtls-dialect=gnu2 --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256 --param simultaneous-prefetches=6 --param prefetch-latency=400 -mvectorize-with-neon-quad
+#Do not use fno-gcse
+USE_OPENGL_RENDERER := true
+TARGET_BOOTANIMATION_PRELOAD := true 
+BOARD_SKIP_ANDROID_DOC_BUILD := true
+DISABLE_DROIDDOC := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 # Bionic stuff
 BOARD_USES_LEGACY_MMAP := true
 TARGET_NEEDS_BIONIC_MD5 := true
@@ -41,7 +49,7 @@ TARGET_ENABLE_NON_PIE_SUPPORT := true
 MALLOC_IMPL := dlmalloc
 
 # Dalvik startup with low memory footprint
-TARGET_ARCH_LOWMEM := true
+#TARGET_ARCH_LOWMEM := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -140,11 +148,13 @@ BOARD_CHARGER_DIM_SCREEN_BRIGHTNESS := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/aries-common/recovery/graphics.c
 
 # Boot Animation
-TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
+TARGET_DISABLE_ARM_PIE := true
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 # Hardware rendering
-USE_OPENGL_RENDERER := true
 BOARD_EGL_SYSTEMUI_PBSIZE_HACK := true
 
 # OMX buffer reallocate
