@@ -33,8 +33,8 @@ TARGET_ARCH_VARIANT_CPU := cortex-a8
 TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_SMP := false
 KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin"
-TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=hardfp -gtoggle -s -DNDEBUG -march=armv7-a -mthumb -O2 -funroll-loops -mimplicit-it=always -mno-warn-deprecated -mauto-it --disable-docs -mtls-dialect=gnu2 --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256 --param simultaneous-prefetches=6 --param prefetch-latency=400 -mvectorize-with-neon-quad
-TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=hardfp -gtoggle -s -DNDEBUG -O2 -funroll-loops -mthumb -march=armv7-a -mimplicit-it=always -mno-warn-deprecated -mauto-it --disable-docs -mtls-dialect=gnu2 --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256 --param simultaneous-prefetches=6 --param prefetch-latency=400 -mvectorize-with-neon-quad
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=hardfp -gtoggle -s -DNDEBUG -DTRIMMED -march=armv7-a -mthumb -O2 -funroll-loops -mimplicit-it=always -mno-warn-deprecated -mauto-it --disable-docs -mtls-dialect=gnu2 --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256 --param simultaneous-prefetches=6 --param prefetch-latency=400 -mvectorize-with-neon-quad
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=hardfp -gtoggle -s -DNDEBUG -DTRIMMED -O2 -funroll-loops -mthumb -march=armv7-a -mimplicit-it=always -mno-warn-deprecated -mauto-it --disable-docs -mtls-dialect=gnu2 --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256 --param simultaneous-prefetches=6 --param prefetch-latency=400 -mvectorize-with-neon-quad
 #Do not use fno-gcse
 USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true 
